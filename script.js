@@ -3,11 +3,11 @@
 
 
 
-let input = document.getElementById("inputElement");
+const input = document.getElementById("inputElement");
 
 const listaTarefas = document.getElementById("listaElement");
 
-const lista_zerada = document.getElementById("limparLista")
+const listaZerada = document.getElementById("limparLista")
  
 
   //Criando um Array
@@ -20,9 +20,9 @@ const mensagem = document.getElementById("mensagem");
 
 //Chama a função//
 
-   renderizartarefas();
+   renderizarTarefas();
 
-function adicionartarefas(event){
+function adicionarTarefas(event){
 
    event.preventDefault();
     
@@ -45,8 +45,8 @@ function adicionartarefas(event){
     tarefas.push(tarefa)
       input.value = ""
 
-    renderizartarefas(event)
-    salvardados(event);
+    renderizarTarefas(event)
+    salvarDados(event);
   
 
     
@@ -55,7 +55,7 @@ function adicionartarefas(event){
  
       
 }
-function renderizartarefas(event){
+function renderizarTarefas(event){
     
     
 
@@ -96,8 +96,8 @@ function renderizartarefas(event){
 
   function removerTarefa(i){
     tarefas.splice(i, 1)
-    renderizartarefas();
-    salvardados();
+    renderizarTarefas();
+    salvarDados();
   }
 
 }
@@ -106,19 +106,19 @@ function editarTarefa(i){
 let tarefaEditada = prompt("Edite sua tarefa:")
 if(tarefaEditada.trim() !== ""){
   tarefas[i] = tarefaEditada
-  renderizartarefas()
+  renderizarTarefas()
 }
 if(tarefas[i] = tarefas[1]){
   document.getElementById("")
 }
 
 }
-function limparlista(event){
+function limparLista(event){
    event.preventDefault();
 
   tarefas.length = 0
   localStorage.clear("@listaTarefas")
-  renderizartarefas()
+  renderizarTarefas()
    
   
 }
@@ -127,6 +127,6 @@ function limparlista(event){
 
 //json.stringify servi para converter uma lista em uma string
 
-function salvardados(){
+function salvarDados(){
   localStorage.setItem("@listaTarefas",JSON.stringify(tarefas) )
 }
