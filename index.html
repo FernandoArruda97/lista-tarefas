@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div id="container">
+    <form>
+        <h1>Lista de Tarefas</h1>
+        
+        <input type="text" id="inputElement" placeholder="Adicione uma tarefa...">
+        
+        <button onclick="adicionartarefas(event)" id="buttonElement">Adicionar Tarefa</button>
+        <button onclick="limparlista(event)" id="limparLista" style="display: none;">Limpar Lista</button>
+
+        <p id="mensagem"></p>
+
+        <ul id="listaElement">
+
+        </ul>
+    </form>
+   </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
